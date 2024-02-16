@@ -1,6 +1,5 @@
 export class History {
     #name
-    #path
 
     setName(name){
         this.#name = name
@@ -8,11 +7,5 @@ export class History {
     getName(){
         return this.#name
     }
-    
-    setPath(path){
-        this.#path = path
-    }
-    getPath(){
-        return this.#path
-    }
+
 }
