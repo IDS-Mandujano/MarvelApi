@@ -2,7 +2,6 @@ export class Character {
 
     #name 
     #path
-    #item
     #series = []
     #histories = []
     #events = []
@@ -20,13 +19,6 @@ export class Character {
     }
     getPath(){
         return this.#path
-    }
-
-    setItem(item){
-        this.#item = item
-    }
-    getItem(){
-        return this.#item
     }
 
     addSerie(serie){
