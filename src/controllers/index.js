@@ -58,6 +58,15 @@ import { Series } from "../models/Series.js"
     let cardCharacters = document.getElementById("card-Characters")
     let btn = document.getElementById("printElements")
     btn.addEventListener("click",()=>{
+
+        if(listCharacter.getCharacters().length === 0){
+            showError()
+        }else{
+            llenarDatos(listCharacter)
+        }
+    })
+
+    function llenarDatos(listCharacter){
         listCharacter.getCharacters().forEach(item => {
             let cards = document.createElement("article")
             cards.classList.add("card-container")
@@ -175,4 +184,9 @@ import { Series } from "../models/Series.js"
 
             cardCharacters.appendChild(cards)
         })
-    })
+
+    }
+
+    function showError(){
+        alert("Debes cargar los datos primero")
+    }
